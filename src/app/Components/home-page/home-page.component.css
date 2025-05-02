@@ -1,0 +1,13 @@
+.img-fluid {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+a.nav-link.text-dark {
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    color: #b10404 !important; 
+}
+  
