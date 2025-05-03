@@ -21,4 +21,11 @@ export class DashboardComponent implements OnInit { // Implement OnInit
     this.powerBiUrl = this.sanitizer.bypassSecurityTrustResourceUrl(unsafeUrl);
   }
 
+  selectedMenu: string = 'dashboard'; // default
+
+showRecommendation() {
+  this.selectedMenu = 'recommendation';
+}
+
+
 }

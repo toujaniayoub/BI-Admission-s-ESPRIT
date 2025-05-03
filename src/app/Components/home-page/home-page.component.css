@@ -10,4 +10,12 @@ a.nav-link.text-dark {
 .navbar-nav .nav-link {
     color: #b10404 !important; 
 }
+
+.text-primary {
+    color: #b10404 !important; 
+}
   
+.btn .btn-secondary .me-2 {
+    background-color: #b2b2b2 !important; 
+    border-color: #323232 !important; 
+}

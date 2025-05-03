@@ -8,7 +8,9 @@ import { RegisterComponent } from './Components/register/register.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { HomePageComponent } from  './Components/home-page/home-page.component';
 import { PowerBIEmbedModule } from 'powerbi-client-angular';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SkillRecommendationComponent } from './Components/skill-recommendation/skill-recommendation.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    HomePageComponent
+    HomePageComponent,
+    SkillRecommendationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PowerBIEmbedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
