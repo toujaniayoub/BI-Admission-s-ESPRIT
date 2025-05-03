@@ -8,6 +8,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { HomePageComponent } from  './Components/home-page/home-page.component';
 import { PowerBIEmbedModule } from 'powerbi-client-angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PowerBIEmbedModule } from 'powerbi-client-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PowerBIEmbedModule
+    PowerBIEmbedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
