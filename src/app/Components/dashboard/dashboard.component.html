@@ -28,12 +28,13 @@
         <label>Machine Learning Models</label>
         <i class="ti ti-apps"></i>
       </li>
-      <li class="pc-item">
-        <a href="../elements/bc_typography.html" class="pc-link">
-          <span class="pc-micon"><i class="ti ti-typography"></i></span>
-          <span class="pc-mtext">model 1</span>
+      <li class="pc-item" (click)="selectedMenu = 'admissionForecast'">
+        <a class="pc-link">
+          <span class="pc-micon"><i class="ti ti-bar-chart"></i></span>
+          <span class="pc-mtext">Prévision Admissions</span>
         </a>
       </li>
+      
       <li class="pc-item">
         <a href="../elements/bc_color.html" class="pc-link">
           <span class="pc-micon"><i class="ti ti-color-swatch"></i></span>
@@ -192,6 +193,11 @@
 <!-- Add a router-outlet or ngIf view swap -->
 <div *ngIf="selectedMenu === 'recommendation'">
   <app-skill-recommendation></app-skill-recommendation>
+</div>
+
+<!-- Component switcher -->
+<div *ngIf="selectedMenu === 'admissionForecast'">
+  <app-admission-forecast></app-admission-forecast>
 </div>
 <div *ngIf="selectedMenu === 'dashboard'">
       <div class="col-12"> 

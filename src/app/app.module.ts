@@ -11,6 +11,7 @@ import { PowerBIEmbedModule } from 'powerbi-client-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillRecommendationComponent } from './Components/skill-recommendation/skill-recommendation.component';
+import { AdmissionForecastComponent } from './Components/admission-forecast/admission-forecast.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SkillRecommendationComponent } from './Components/skill-recommendation/
     RegisterComponent,
     DashboardComponent,
     HomePageComponent,
-    SkillRecommendationComponent
+    SkillRecommendationComponent,
+    AdmissionForecastComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,9 @@ import { SkillRecommendationComponent } from './Components/skill-recommendation/
     PowerBIEmbedModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
