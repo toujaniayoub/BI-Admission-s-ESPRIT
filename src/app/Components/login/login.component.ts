@@ -13,15 +13,18 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   login() {
-    const validEmail = 'addmision-employability@esprit.tn';
-    const validPassword = 'azerty';
-
     const emailInput = (document.getElementById('floatingInput') as HTMLInputElement).value;
     const passwordInput = (document.getElementById('floatingInput1') as HTMLInputElement).value;
 
-    if (emailInput === validEmail && passwordInput === validPassword) {
+    // Login for dashboard_admission
+    if (emailInput === 'addmision-employability@esprit.tn' && passwordInput === 'azerty') {
       this.router.navigate(['/dashboard']);
-    } else {
+    } 
+    // Login for dashboard
+    else if (emailInput === 'admin@esprit.tn' && passwordInput === 'admin123') {
+      this.router.navigate(['/dashboard_admission']);
+    } 
+    else {
       alert('Invalid credentials');
     }
   }
