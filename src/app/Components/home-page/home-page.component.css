@@ -7,12 +7,9 @@ a.nav-link.text-dark {
     font-size: 24px;
 }
 
-.navbar-nav .nav-link {
-    color: #b10404 !important; 
-}
 
 .text-primary {
-    color: #b10404 !important; 
+    color: darkred !important; 
 }
   
 .btn .btn-secondary .me-2 {
@@ -40,6 +37,32 @@ html, body {
     
 a.btn
  {
-    background: #b10404;
+    background: darkred;
     color: white ;
+}
+
+.navbar.default {
+  
+  border-radius: 15px;
+  margin-top: 27px;
+  margin-left: 24px;
+  margin-right: 24px; /* ✅ marge droite ajoutée */
+  margin-bottom: 12px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px #b10404;
+  width: calc(100% - 48px); /* ✅ corrige le débordement */
+  box-sizing: border-box;
+  background: darkred;
+ 
+}
+
+.nav-link.active {
+  color: white !important;
+}
+
+
+.no-scroll[_ngcontent-ng-c1135937362] {
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(41, 40, 40), transparent);
 }

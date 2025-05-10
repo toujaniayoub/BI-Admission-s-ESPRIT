@@ -21,6 +21,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
     "chart.js": "^4.4.9",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "integration": "file:",
     "ng-apexcharts": "^1.15.0",
     "ng2-charts": "^8.0.0",
