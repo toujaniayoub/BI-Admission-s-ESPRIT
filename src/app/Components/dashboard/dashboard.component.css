@@ -50,7 +50,7 @@ element.style {
 
 
 .dropdown-header a.link-primary {
-    color: #b10404;
+    color: #b10404;  
 }
 
 .pc-link:hover .pc-mtext {
@@ -68,3 +68,91 @@ element.style {
     color: #b10404;
 }
     
+i.ti.ti-adjustments-horizontal {
+    color: #b10404;
+}
+
+button.btn.btn-light-secondary.btn-search {
+    background: unset;
+}
+
+.outspacePane {
+    display: none !important;
+}
+
+
+.displayAreaViewport,
+.displayAreaContainer,
+.canvasFlexBox,
+.exploreCanvas,
+.explorationContainer {
+  background: transparent !important;
+}
+iframe {
+    background: transparent !important;
+    border: none;
+    display: block;
+  }
+
+
+  .pc-content {
+    background: white;
+}
+
+.header-wrapper {
+    background: #850303;
+}
+header.pc-header {
+    background: #850303;
+}
+.simplebar-content-wrapper {
+    background: #850303;
+}
+
+.m-header {
+    background: #850303;
+}
+
+
+
+a#sidebar-hide {
+    background: unset;
+}
+
+.simplebar-content-wrapper {
+    background: #dbcece;
+}
+
+[data-pc-preset=preset-1] .pc-header .pc-head-link.head-link-secondary > i {
+    color: white;
+}
+
+[data-pc-preset=preset-1] .pc-header .pc-head-link.head-link-secondary > i {
+    color:  #b10404 !important;
+}
+
+[data-pc-preset=preset-1] .pc-header .pc-head-link.head-link-secondary {
+    background: white;
+}
+
+[data-pc-preset=preset-1] .pc-header .pc-head-link.head-link-primary {
+    background: white !important;
+}
+
+i.ti.ti-menu-2 {
+    color: white;
+}
+
+svg.feather.feather-search.icon-search {
+    color:#b10404;
+}
+
+[data-pc-preset=preset-1] .btn-light-secondary {
+    border-color: #b10404;
+}
+
+.form-control {
+    border: 1px solid #b10404;
+}
+
+
