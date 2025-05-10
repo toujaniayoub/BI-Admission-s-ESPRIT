@@ -1,0 +1,7 @@
+Flask
+Flask-CORS
+pandas
+SQLAlchemy
+psycopg2-binary  # Or psycopg2, depending on your setup
+scikit-learn
+prophet

@@ -1,0 +1,70 @@
+header.pc-header {
+    display: flex
+;
+    padding: 0 20px;
+    flex-grow: 1;
+}
+@media (min-width: 768px) {
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+img.logo {
+    width: 104%;
+    margin-top: 4px;
+}
+
+element.style {
+    padding: 25px 0px;
+}
+
+[data-pc-preset=preset-1] .pc-header .pc-head-link.head-link-secondary > i {
+    color: #b10404;
+}
+
+.pc-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+
+[data-pc-preset=preset-1] .btn-light-secondary {
+    color: #b10404;
+}
+
+[data-pc-preset=preset-1] .pc-header .pc-head-link.head-link-primary {
+    color: #b10404;
+}
+
+.dropdown-header h5{
+    color: #b10404;
+}
+
+.text-center.py-2 a {
+    color: #b10404;  
+}
+
+
+.dropdown-header a.link-primary {
+    color: #b10404;
+}
+
+.pc-link:hover .pc-mtext {
+    color: #b10404 !important; /* Couleur rouge pour le texte */
+}
+  
+.pc-link:hover .pc-micon i {
+    color: #b10404 !important; /* Couleur rouge pour l'icône */
+}
+
+.dropdown-item:hover span {
+    color: #b10404;
+}
+  .dropdown-item:hover i {
+    color: #b10404;
+}
+    

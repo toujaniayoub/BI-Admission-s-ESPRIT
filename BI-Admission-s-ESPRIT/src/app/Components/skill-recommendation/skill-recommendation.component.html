@@ -1,0 +1,40 @@
+<div class="container section-title" data-aos="fade-up">
+    <h2>Skill Recommender</h2>
+    <div><span>Discover</span> <span class="description-title">Top Skills for Your Target Job</span></div>
+  </div>
+  
+  <div class="container" data-aos="fade-up" id="recommendations">
+    <div class="containerP">
+      <h1>Find Your Job's Must-Have Skills</h1>
+  
+      <form (ngSubmit)="getRecommendations()" #skillForm="ngForm" novalidate>
+        <div>
+          <label for="jobTitle">Enter Job Title:</label>
+          <input
+            type="text"
+            id="jobTitle"
+            name="jobTitle"
+            [(ngModel)]="jobTitle"
+            class="form-control"
+            placeholder="e.g. Data Analyst"
+            required
+          />
+        </div>
+  
+        <button type="submit" [disabled]="loading">Get Recommendations</button>
+      </form>
+  
+      <div *ngIf="error" class="error-message">{{ error }}</div>
+      <div *ngIf="loading" class="loading-spinner">Loading...</div>
+  
+      <div *ngIf="recommendedSkills.length" class="skills-scroll-container">
+        <h3>Recommended Skills:</h3>
+        <div class="scroll-wrapper">
+          <div *ngFor="let skill of recommendedSkills" class="skill-card">
+            {{ skill }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

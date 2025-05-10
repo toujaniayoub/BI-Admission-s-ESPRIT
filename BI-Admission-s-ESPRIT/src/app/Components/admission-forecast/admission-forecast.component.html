@@ -1,0 +1,28 @@
+<div class="container section-title" data-aos="fade-up">
+  <h2>Forecast of Admission Applications (7 Days)</h2>
+</div>
+
+<div *ngIf="forecast.length">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Forecast</th>
+        <th>Lower Bound</th>
+        <th>Upper Bound</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of forecast">
+        <td>{{ row.ds | date: 'mediumDate' }}</td>
+        <td>{{ row.yhat | number:'1.0-0' }}</td>
+        <td>{{ row.yhat_lower | number:'1.0-0' }}</td>
+        <td>{{ row.yhat_upper | number:'1.0-0' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
