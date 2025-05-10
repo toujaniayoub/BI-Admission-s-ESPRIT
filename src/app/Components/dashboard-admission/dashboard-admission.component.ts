@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+// Importing necessary modules and components
+// import { HttpClient } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+
+
 @Component({
   selector: 'app-dashboard-admission',
-  templateUrl: './dashboard-admission.component.html'
+  templateUrl: './dashboard-admission.component.html',
+  
+
 })
+
+
 export class DashboardAdmissionComponent {
   powerBiUrl: SafeResourceUrl;
-  selectedMenu = 'dashboard-admission'; // Ensures iframe displays
+  selectedMenu = ''; // Ensures iframe displays
 
   constructor(private sanitizer: DomSanitizer) {
     this.powerBiUrl = this.sanitizer.bypassSecurityTrustResourceUrl(

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SkillRecommendationComponent } from './Components/skill-recommendation/skill-recommendation.component';
 import { AdmissionForecastComponent } from './Components/admission-forecast/admission-forecast.component';
 import { IndustryClustersComponent } from './Components/industry-clusters/industry-clusters.component';
+import { DashboardAdmissionComponent } from './Components/dashboard-admission/dashboard-admission.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { IndustryClustersComponent } from './Components/industry-clusters/indust
     HomePageComponent,
     SkillRecommendationComponent,
     AdmissionForecastComponent,
-    IndustryClustersComponent
+    IndustryClustersComponent,
+    DashboardAdmissionComponent
   ],
   imports: [
     BrowserModule,
