@@ -35,18 +35,13 @@
         </a>
       </li>
       
-      <li class="pc-item">
-        <a href="../elements/bc_color.html" class="pc-link">
-          <span class="pc-micon"><i class="ti ti-color-swatch"></i></span>
-          <span class="pc-mtext">model 2</span>
-        </a>
-      </li>
-      <li class="pc-item">
-        <a href="../elements/icon-tabler.html" class="pc-link">
-          <span class="pc-micon"><i class="ti ti-plant-2"></i></span>
-          <span class="pc-mtext">model 3</span>
-        </a>
-      </li>
+      
+      <li class="pc-item" (click)="showIndustryClusters()">
+          <a class="pc-link">
+            <span class="pc-micon"><i class="ti ti-pie-chart"></i></span>
+            <span class="pc-mtext">Alumni Industry Clusters</span>
+          </a>
+        </li>
 
 
       <li class="pc-item pc-caption">
@@ -186,7 +181,7 @@
 <!-- [ Header ] end -->
 
 
-
+<!-- [ Main Content ] start -->
 <div class="pc-container">
   <div class="pc-content">
     <div class="row">
@@ -199,6 +194,9 @@
 <div *ngIf="selectedMenu === 'admissionForecast'">
   <app-admission-forecast></app-admission-forecast>
 </div>
+ <div *ngIf="selectedMenu === 'industryClusters'">
+  <app-industry-clusters></app-industry-clusters>
+      </div>
 <div *ngIf="selectedMenu === 'dashboard'">
       <div class="col-12"> 
         <iframe 
@@ -215,6 +213,7 @@
 </div>
 
 
+<!-- [ Main Content ] end -->
 <footer class="pc-footer">
   <div class="footer-wrapper container-fluid">
     <div class="row">
