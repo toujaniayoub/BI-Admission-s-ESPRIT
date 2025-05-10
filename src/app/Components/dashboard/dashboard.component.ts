@@ -26,6 +26,9 @@ showRecommendation() {
   this.selectedMenu = 'recommendation';
 }
 
+showIndustryClusters() {
+    this.selectedMenu = 'industryClusters';
+  }
 
 
 

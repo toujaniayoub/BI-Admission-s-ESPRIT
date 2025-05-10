@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillRecommendationComponent } from './Components/skill-recommendation/skill-recommendation.component';
 import { AdmissionForecastComponent } from './Components/admission-forecast/admission-forecast.component';
+import { IndustryClustersComponent } from './Components/industry-clusters/industry-clusters.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AdmissionForecastComponent } from './Components/admission-forecast/admi
     DashboardComponent,
     HomePageComponent,
     SkillRecommendationComponent,
-    AdmissionForecastComponent
+    AdmissionForecastComponent,
+    IndustryClustersComponent
   ],
   imports: [
     BrowserModule,
