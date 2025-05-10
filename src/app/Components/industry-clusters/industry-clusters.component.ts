@@ -3,6 +3,7 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { IndustryCountsService, IndustryCount } from 'src/app/service/industry-counts.service';
 
+
 @Component({
     selector: 'app-industry-clusters',
     templateUrl: './industry-clusters.component.html',
