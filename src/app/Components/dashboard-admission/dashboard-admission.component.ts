@@ -15,8 +15,15 @@ export class DashboardAdmissionComponent {
   constructor(private sanitizer: DomSanitizer) {} 
 
   ngOnInit(): void {
-    const unsafeUrl = 'https://app.powerbi.com/reportEmbed?reportId=fd9243e6-3c23-40e3-b52f-f659de6f22ee&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&filterPaneEnabled=false&navContentPaneEnabled=false';
-  
+    const unsafeUrl = '  https://app.powerbi.com/reportEmbed?reportId=d2051062-dde4-453d-9735-b7fc4cebd802&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&filterPaneEnabled=false&navContentPaneEnabled=false';
+
     this.powerBiUrl = this.sanitizer.bypassSecurityTrustResourceUrl(unsafeUrl);
   }
+
+  selectedMenu: string = 'dashboard';
+
+  showAdmissionClustering() {
+    this.selectedMenu = 'admissionClustering';
+  }
+
 }

@@ -3,20 +3,25 @@ img.logo {
 }
 
 .pcoded-navbar .main-menu-header {
-    margin-top: 17px !important;
+    margin-top: 20px !important;
 }
 
 
 .pcoded-header.header-dark
  {
-    background: #aba2a5;
+    background: #E6E6E6;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .simplebar-content-wrapper {
-    background: #070707;
+    background: #5B2422;
 }
 
 .pcoded-navbar .main-menu-header {
-    background: #dd0b28;
+    background: #5B2422;
+}
+
+/* In your component's CSS file */
+.make-bold {
+  font-weight: bold;
 }
