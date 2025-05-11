@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; 
 
 @Component({
   selector: 'app-dashboard-admission',
-  templateUrl: './dashboard-admission.component.html'
+  templateUrl: './dashboard-admission.component.html',
+  styleUrls: ['./dashboard-admission.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class DashboardAdmissionComponent {
-  powerBiUrl: SafeResourceUrl;
-  selectedMenu = 'dashboard-admission'; // Ensures iframe displays
+  powerBiUrl: SafeResourceUrl | null = null;
+  
+  constructor(private sanitizer: DomSanitizer) {} 
 
-  constructor(private sanitizer: DomSanitizer) {
-    this.powerBiUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      'https://app.powerbi.com/reportEmbed?reportId=56549463-b086-49b1-86ad-3bda9860c330&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730'
-    );
+  ngOnInit(): void {
+    const unsafeUrl = 'https://app.powerbi.com/reportEmbed?reportId=fd9243e6-3c23-40e3-b52f-f659de6f22ee&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&filterPaneEnabled=false&navContentPaneEnabled=false';
+  
+    this.powerBiUrl = this.sanitizer.bypassSecurityTrustResourceUrl(unsafeUrl);
   }
 }
