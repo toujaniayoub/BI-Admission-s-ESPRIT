@@ -1,0 +1,22 @@
+img.logo {
+    width: 220px;
+}
+
+.pcoded-navbar .main-menu-header {
+    margin-top: 17px !important;
+}
+
+
+.pcoded-header.header-dark
+ {
+    background: #aba2a5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.simplebar-content-wrapper {
+    background: #070707;
+}
+
+.pcoded-navbar .main-menu-header {
+    background: #dd0b28;
+}
