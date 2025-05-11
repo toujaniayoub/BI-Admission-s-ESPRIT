@@ -13,10 +13,11 @@ img.logo {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.simplebar-content-wrapper {
+.navbar-content.scroll-div {
     background: #070707;
 }
 
 .pcoded-navbar .main-menu-header {
     background: #dd0b28;
 }
+
