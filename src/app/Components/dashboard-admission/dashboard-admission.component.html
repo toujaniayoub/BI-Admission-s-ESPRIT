@@ -28,12 +28,7 @@
 					<li class="nav-item">
 					    <a href="/dashboard_admission" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
-					 <li class="pc-item" (click)="selectedMenu = 'admissionForecast'">
-        <a class="pc-link">
-          <span class="pc-micon"><i class="ti ti-bar-chart"></i></span>
-          <span class="pc-mtext">Prévision Admissions</span>
-        </a>
-      </li>
+				
 					
 					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Page layouts</span></a>
@@ -208,10 +203,7 @@
 
 </div>
         <div class="row">
-			 <div *ngIf="selectedMenu === 'admissionForecast'">
-					<app-admission-forecast 
-					></app-admission-forecast>
-		 </div>
+			
 		 <div *ngIf="selectedMenu === 'dashboard-admission'">
 			<div class="col-12">
 				<iframe
@@ -228,7 +220,3 @@
         </div>
         <!-- [ Main Content ] end -->
 </section>
-
-
-
-

@@ -14,6 +14,7 @@ import { SkillRecommendationComponent } from './Components/skill-recommendation/
 import { AdmissionForecastComponent } from './Components/admission-forecast/admission-forecast.component';
 import { IndustryClustersComponent } from './Components/industry-clusters/industry-clusters.component';
 import { DashboardAdmissionComponent } from './Components/dashboard-admission/dashboard-admission.component';
+import { AdmissionClusteringComponent } from './Components/admission-clustering/admission-clustering.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { DashboardAdmissionComponent } from './Components/dashboard-admission/da
     SkillRecommendationComponent,
     AdmissionForecastComponent,
     IndustryClustersComponent,
-    DashboardAdmissionComponent
+    DashboardAdmissionComponent,
+    AdmissionClusteringComponent
+
   ],
   imports: [
     BrowserModule,

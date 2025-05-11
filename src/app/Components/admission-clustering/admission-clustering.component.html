@@ -1,0 +1,25 @@
+<div class="admission-clustering-container">
+  <h2>Admission Rates by City</h2>
+
+  <div class="goal-input">
+    <label for="goal">Target Goal (%):</label>
+    <input type="number" id="goal" [(ngModel)]="targetGoal" (change)="updateGoal($event)" min="0" max="100">
+  </div>
+
+  <div class="chart-container">
+    <div
+      *ngFor="let data of admissionData"
+      class="bar"
+      [style.height.%]="data.admissionRate"
+      [style.backgroundColor]="getBarColor(data.admissionRate)"
+      (click)="selectVille(data.ville)"
+      [title]="data.ville + ': ' + data.admissionRate + '%'"
+    >
+      {{ data.ville }}
+    </div>
+  </div>
+
+  <div *ngIf="selectedVille" class="selected-ville-info">
+    <p>Selected City: {{ selectedVille }}</p>
+  </div>
+</div>
