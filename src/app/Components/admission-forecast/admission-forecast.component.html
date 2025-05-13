@@ -1,35 +1,63 @@
 <div class="container section-title" data-aos="fade-up">
-    <h2>Forecast of Admission Applications (7 Days)</h2>
+  <h2>Advanced Forecast of Admission Applications (7 Days)</h2>
+</div>
+
+<div class="mb-3">
+  <label for="targetApplications" class="form-label">Set Target Applications:</label>
+  <div class="input-group">
+    <input type="number" class="form-control" id="targetApplications" [(ngModel)]="targetApplications"
+           placeholder="Enter target number">
+    <button class="btn btn-primary" (click)="updateForecast()">Apply Target</button>
+  </div>
+  <small class="form-text text-muted">Enter a target number to highlight successful forecast days.</small>
 </div>
 
 <div *ngIf="forecast.length">
-    <div class="row">
-        <div class="col-md-6">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Forecast</th>
-                        <th>Lower Bound</th>
-                        <th>Upper Bound</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let row of forecast">
-                        <td>{{ row.ds | date: 'mediumDate' }}</td>
-                        <td>{{ row.yhat | number:'1.0-0' }}</td>
-                        <td>{{ row.yhat_lower | number:'1.0-0' }}</td>
-                        <td>{{ row.yhat_upper | number:'1.0-0' }}</td>
-                    </tr>
-                </tbody>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">7-Day Application Forecast with Target</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead class="thead-light">
+                <tr>
+                  <th>Date</th>
+                  <th>Forecast</th>
+                  <th>Target</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of forecast">
+                  <td>{{ row.ds | date: 'mediumDate' }}</td>
+                  <td [style.backgroundColor]="getCellColor(row.status)"
+                      [style.color]="getFontColor(row.status)">
+                    {{ row.yhat | number:'1.0-0' }}
+                  </td>
+                  <td>
+                    <span *ngIf="targetApplications !== null">{{ row.target | number:'1.0-0' }}</span>
+                    <span *ngIf="targetApplications === null">-</span>
+                  </td>
+                  <td [style.backgroundColor]="getCellColor(row.status)"
+                      [style.color]="getFontColor(row.status)">
+                    <span *ngIf="targetApplications !== null">{{ row.status || '-' }}</span>
+                    <span *ngIf="targetApplications === null">-</span>
+                  </td>
+                </tr>
+              </tbody>
             </table>
+          </div>
         </div>
-        <div class="col-md-6">
-            <canvas #forecastChart></canvas>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<div *ngIf="error" class="alert alert-danger">
-    {{ error }}
+<div *ngIf="error" class="alert alert-danger mt-3">
+  {{ error }}
+</div>
+
+<div *ngIf="!forecast.length && !error" class="alert alert-info mt-3">
+  Loading forecast data...
 </div>

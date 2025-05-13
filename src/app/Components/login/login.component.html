@@ -38,7 +38,7 @@
               <label for="floatingInput">Email address / Username</label>
               <div *ngIf="emailField.invalid && emailField.touched" class="text-danger">
                 <small *ngIf="emailField.errors?.['required']">Email is required.</small>
-                <small *ngIf="emailField.errors?.['email']">Email must contain '@'</small>
+                <small *ngIf="emailField.errors?.['email']">Email must contain &#64;</small>
               </div>
             </div>
 

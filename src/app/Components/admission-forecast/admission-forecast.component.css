@@ -1,0 +1,14 @@
+/* Add styles for the colored cells */
+ .table td {
+  transition: background-color 0.3s ease; /* Smooth color transition */
+ }
+
+ .table td.green-cell {
+  background-color: green;
+  color: white; /* Optional: white text for better contrast */
+ }
+
+ .table td.red-cell {
+  background-color: red;
+  color: white; /* Optional: white text for better contrast */
+ }
