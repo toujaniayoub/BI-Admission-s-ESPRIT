@@ -13,9 +13,9 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   login() {
-    if (this.email === 'addmision-employability@esprit.tn' && this.password === 'azerty') {
+    if (this.email === 'employability@esprit.tn' && this.password === 'azerty') {
       this.router.navigate(['/dashboard']);
-    } else if (this.email === 'admin@esprit.tn' && this.password === 'admin123') {
+    } else if (this.email === 'admission@esprit.tn' && this.password === 'admin123') {
       this.router.navigate(['/dashboard_admission']);
     } else {
       alert('Invalid credentials');

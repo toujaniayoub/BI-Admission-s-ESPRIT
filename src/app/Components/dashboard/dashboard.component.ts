@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {} 
 
   ngOnInit(): void {
-    const unsafeUrl = 'https://app.powerbi.com/reportEmbed?reportId=d2051062-dde4-453d-9735-b7fc4cebd802&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730';
+    const unsafeUrl = 'https://app.powerbi.com/reportEmbed?reportId=d2051062-dde4-453d-9735-b7fc4cebd802&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&filterPaneEnabled=false&navContentPaneEnabled=false';
   
     this.powerBiUrl = this.sanitizer.bypassSecurityTrustResourceUrl(unsafeUrl);
   }
