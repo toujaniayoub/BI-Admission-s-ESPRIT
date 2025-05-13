@@ -98,7 +98,8 @@ Ensure you have the following environments installed on your machine:
 
 ## Online Application Link
 
-[**http://localhost:4200/**]
+You can access the application locally at <http://localhost:4200/>.
+
 
 Based on the provided information, the application features the following:
 
