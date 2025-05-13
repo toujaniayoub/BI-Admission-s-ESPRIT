@@ -106,7 +106,7 @@ Based on the provided information, the application features the following:
 * **Homepage:** The initial landing page for the application.
 * **Login Authentication:** Secure authentication system for different user roles.
 * **Role-Based Access:** Separate spaces for different clients:
-    * **Head of Admissions Department:** A dashboard containing admissions analysis and a model predicting future application numbers (as seen in the "Prévision Admissions" section of the provided PDF).
+    * **Head of Admissions Department:** A dashboard containing admissions analysis and a model predicting future application numbers.
     * **Head of Employability Department:** A dedicated space with dashboards, recommendations for alumni skills for specific jobs, a search functionality, and clustering of alumni based on industry (as suggested by "Alumni Industry Clusters").
 * **Machine Learning Models:** Includes a prediction model for admissions and a recommendation system for alumni skills.
 * **APIs:** The Flask backend (`app.py`) provides APIs to fetch data for the frontend, including:
@@ -128,4 +128,3 @@ The Angular application follows a standard Angular CLI project structure. Key el
 * **`package.json`:** npm package file listing dependencies and scripts.
 * **`tsconfig.json`:** TypeScript configuration file.
 
-The application likely includes components to display the dashboards and visualizations for both the admissions and employability departments, utilizing the data fetched from the Flask backend. The "Get Skills Based On A Job" functionality, as seen in the PDF, is also implemented in the Angular frontend, interacting with the corresponding Flask API endpoint.
